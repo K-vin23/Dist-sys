@@ -1,6 +1,6 @@
 # Dist-sys
 
-<span>![</span><span>Arquitectura del proyecto final</span><span>]</span><span>(</span><span>https://raw.githubusercontent.com/K-vin23/Dist-sys/master/Architecture/Architecture%20dom-almacen.png</span><span>)</span>
+![Arquitectura del proyecto final](./Architecture/Architecture%20dom-almacen.png)
 
 |backend API's |Docker image|
 |---|---|
