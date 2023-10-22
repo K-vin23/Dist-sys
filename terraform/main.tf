@@ -186,6 +186,10 @@ resource "docker_container" "postgresql" {
     }
 
   env = ["POSTGRES_PASSWORD=0002"]
+
+  networks_advanced {
+    name = docker_network.application_network.name
+  }
 }
 
 resource "docker_image" "image_firewall" {
