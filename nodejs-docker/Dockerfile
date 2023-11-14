@@ -5,7 +5,7 @@ FROM node:alpine
 WORKDIR /usr/app
 
 #Copy the project
-COPY ./ ./
+COPY ./nodejs-docker ./
 
 #Install dependencies
 RUN npm install 
