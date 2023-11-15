@@ -1,8 +1,12 @@
 # Dist-sys
 
+***A rp for the Projects of Distributed Systems course in the UCC***
+
 ## Version 1.8 
 
 ![Arquitectura del proyecto final](./Architecture/Architecture%20dom-almacen.png)
+
+**Structure in Terraform**
 
 |backend API's |Docker image|
 |---|---|
@@ -17,10 +21,8 @@
 |Message Broker |RabbitMQ|
 
 
-## All the project was created and tested in terraform 3.0.1 or lastest
+**All the project was created and tested in terraform w/provider kreuzwerker/docker 3.0.1 or lastest**
 
 > [!IMPORTANT]
-> Version 1.7 uses terraform 2.23.1, to update to Version 1.8 or newer you must run the command `terraform init -upgrade`and `terraform refresh`
+> Version 1.7 uses terraform provider kreuzwerker/docker 2.23.1, to update to Version 1.8 or newer you must run the command `terraform init -upgrade` and `terraform refresh`
 
-
-***A rp for the Projects of Distributed Systems course in the UCC***
