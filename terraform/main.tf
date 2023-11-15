@@ -2,7 +2,7 @@ terraform {
   required_providers {
     docker = {
       source  = "kreuzwerker/docker"
-      version = "2.23.1"
+      version = "~> 3.0.1"
     }
   }
 }
@@ -14,32 +14,17 @@ resource "docker_network" "application_network" {
 }
 
 resource "docker_image" "springboot_image_pay" {
-    name = "springboot-pay"
-
-    build{
-        path = "../jdk-docker"
-        dockerfile = "Dockerfile"
-    }
+    name = "kvin23/springboot-pay:latest"
 
 }
 
 resource "docker_image" "springboot_image_ord" {
-    name = "springboot-ord"
-
-    build{
-        path = "../jdk-docker-2"
-        dockerfile = "Dockerfile"
-    }
+    name = "kvin23/springboot-api:latest"
 
 }
 
 resource "docker_image" "springboot_image_dom" {
-    name = "springboot-dom"
-
-    build{
-        path = "../jdk-docker-3"
-        dockerfile = "Dockerfile"
-    }
+    name = "kvin23/springboot-dom:latest"
 
 }
 
@@ -83,12 +68,7 @@ resource "docker_container" "springboot_dom" {
 }
 
 resource "docker_image" "nodejs_image" {
-    name = "nodejs-app"
-
-    build{
-        path = "../nodejs-docker"
-        dockerfile = "Dockerfile"
-    }
+    name = "kvin23/nodejs-catalog:latest"
 
 }
 
@@ -106,12 +86,7 @@ resource "docker_container" "nodejs" {
 }
 
 resource "docker_image" "python_image" {
-    name = "python-app"
-
-    build{
-        path = "../python-docker"
-        dockerfile = "Dockerfile"
-    }
+    name = "kvin23/python-users:latest"
 
 }
 
@@ -168,12 +143,7 @@ resource "docker_container" "kong" {
 }
 
 resource "docker_image" "postgres_image" {
-    name = "porterpostgre"
-
-    build{
-        path = "../postgres-docker"
-        dockerfile = "Dockerfile"
-    }
+    name = "kvin23/postgres-project:latest"
 
 }
 
